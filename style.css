@@ -105,3 +105,34 @@ button:hover{
   margin-top:20px;
   font-size:1.2rem;
 }
+
+.hearts::before,
+.hearts::after{
+  content:"❤️";
+  position:fixed;
+  font-size:2rem;
+  animation:float 6s linear infinite;
+  opacity:0.6;
+}
+
+.hearts::before{
+  left:10%;
+  animation-delay:0s;
+}
+
+.hearts::after{
+  left:80%;
+  animation-delay:3s;
+}
+
+@keyframes float{
+  0%{
+    bottom:-10%;
+    transform:translateX(0) rotate(0deg);
+  }
+
+  100%{
+    bottom:110%;
+    transform:translateX(100px) rotate(360deg);
+  }
+}
